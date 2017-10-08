@@ -2,7 +2,9 @@
 1.
 windows版のOpenSSHを
 「https://github.com/PowerShell/Win32-OpenSSH/releases」
-よりダウンロードし、このファイルと同じ場所に置く。
+よりダウンロードし、このファイルと同じ場所に
+「OpenSSH-Win32.zip」
+という名前で置く。
 2.
 PowerShellを管理者権限で開き、このファイルが有るフォルダまで移動してから、
 「./setup_win_openssh.ps1」
