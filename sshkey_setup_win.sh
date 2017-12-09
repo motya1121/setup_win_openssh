@@ -7,19 +7,19 @@ mstnode_account=$3
 
 dir_exist=`sshpass -p ${vm_passwd} ssh IEUser@${vm_addr} "powershell Test-Path C:\Users\IEUser\.ssh"`
 if [ $(echo "$dir_exist" | grep -e 'True') ]; then
-    echo "## .ssh exist"
+    echo "## .ssh directory exist"
     :
 else
-    echo "## .ssh not exist. make .ssh"
+    echo "## .ssh directory not exist. make .ssh"
     sshpass -p ${vm_passwd} ssh IEUser@${vm_addr} "mkdir C:\Users\IEUser\.ssh"
 fi
 
 
 dir_exist=`sshpass -p ${vm_passwd} ssh IEUser@${vm_addr} "powershell Test-Path C:\Users\IEUser\.ssh\authorized_keys"`
 if [ $(echo "$dir_exist" | grep -e 'True') ]; then
-    echo "## authorized_keys exist"
+    echo "## authorized_keys file exist"
 else
-    echo "## authorized_keys not exist. make authorized_keys"
+    echo "## authorized_keys file not exist. make authorized_keys"
     sshpass -p ${vm_passwd} ssh IEUser@${vm_addr} "type nul > C:\Users\IEUser\.ssh\authorized_keys"
 fi
 
