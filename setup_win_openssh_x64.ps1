@@ -1,5 +1,5 @@
 ﻿Expand-Archive -Path .\OpenSSH-Win64.zip -DestinationPath C:\Program` Files
-Rename-Item C:\Program` Files\OpenSSH-Win64 C:\Program` Files\OpenSSH
+Rename-Item C:\Program` Files\OpenSSH-Win32 C:\Program` Files\OpenSSH
 cd C:\Program` Files\OpenSSH
 .\install-sshd.ps1
 .\ssh-keygen.exe -A
